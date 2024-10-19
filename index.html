@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="imagen" src="/img/aluraweek.png" alt="aluraweek">
+    </header>
+
+    <div class="container">
+        <!-- Sección Mis Productos (ahora a la izquierda) -->
+        <section class="product-list">
+            <h2>Mis Productos</h2>
+            <div id="productContainer"></div>
+        </section>
+
+        <!-- Sección Agregar Producto (ahora a la derecha) -->
+        <section class="add-product">
+            <h2>Agregar Producto:</h2>
+            <form id="productForm">
+                <input class="productForm-input" placeholder="Nombre..." type="text" id="name" required>
+                <input class="productForm-input" placeholder="Precio..." type="number" id="price" required>
+                <input class="productForm-input" placeholder="URL de la imagen..." type="url" id="imageUrl" required>
+
+                <div class="buttons">
+                    <button class="submit" type="submit">Enviar</button>
+                    <button class="buttons-clean" type="button" id="clearBtn">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <img class="imagen" src="/img/aluraweek.png" alt="aluraweek">
+        <p>Desarrollado por Alvaro R Soria</p>
+        <p>Alura Latam - 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

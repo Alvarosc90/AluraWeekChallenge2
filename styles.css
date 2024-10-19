@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header, footer {
+    background-color: #5300C8;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.productForm-input {
+    border-radius: 30px;
+    height: 40px;
+    border: 3px solid #03318c;
+}
+
+.productForm-input::placeholder {
+    color: #03318c; /* Color del borde */
+    font-weight: bold; /* Negrita */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.add-product {
+    width: 38%;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-list {
+    width: 60%;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+form label,
+form input {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Borde redondeado */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    padding: 10px;
+    background-color: #5300C8;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.product-card img {
+    width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+    height: auto;
+    border: 2px solid black;
+    border-radius: inherit; /* Aplica el mismo borde redondeado al img */
+}
+
+.price-delete-container {
+    display: flex;
+    justify-content: space-between; /* Para que el precio y el botón se distribuyan en la fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-top: 10px;
+}
+
+.delete-btn {
+    color: #5300C8;
+    font-size: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit {
+    color: white;
+    background-color: #03318c;
+}
+
+.buttons-clean {
+    background-color: white;
+    color: black;
+    border: 1px solid #03318c;
+}
+
+.submit:hover {
+    background-color: #03350c;
+}
+
+.buttons-clean:hover {
+    background-color: black;
+    color: white;
+}
+
+#productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    width: calc(33% - 1rem);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    margin: 0.25rem 0;
+}
+
+.imagen {
+    width: 300px;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;    /* Mantiene la relación de aspecto */
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+
+    .imagen {
+        max-width: 50%; /* Cambia a un ancho máximo más pequeño para móviles */
+    }
+    .container {
+        flex-direction: column-reverse; /* Cambia a columna en pantallas pequeñas */
+        padding: 1rem; /* Ajusta el padding para móviles */
+    }
+
+    .add-product {
+        width: 100%; /* Ocupa el 100% del ancho */
+        margin-bottom: 2rem; /* Espaciado entre las secciones */
+    }
+
+    .product-list {
+        width: 100%; /* Ocupa el 100% del ancho */
+    }
+
+    .product-card {
+        width: 100%; /* Asegura que cada producto ocupe el ancho completo en la vista móvil */
+    }
+
+    .imagen {
+        width: 100%; /* Asegura que las imágenes se ajusten en dispositivos móviles */
+        height: auto;
+    }
+}
